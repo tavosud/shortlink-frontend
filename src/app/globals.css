@@ -12,15 +12,44 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* dashboard.css */
+.dashboard-container {
+  @apply min-h-screen bg-gray-100 p-4;
+}
+
+@screen sm {
+  .dashboard-container {
+    @apply p-6;
+  }
+}
+
+.dashboard-grid {
+  @apply grid grid-cols-1 gap-6;
+}
+
+@screen lg {
+  .dashboard-grid {
+    @apply grid-cols-3;
+  }
+}
+
+.card {
+  @apply bg-white p-4 rounded-lg shadow;
+}
+
+.title {
+  @apply text-xl font-bold mb-6 text-center;
+}
+
+@screen sm {
+  .title {
+    @apply text-2xl text-left;
+  }
+}
+
