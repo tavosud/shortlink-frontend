@@ -1,14 +1,25 @@
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import './global.css';
+import localFont from "next/font/local";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const geist = localFont({
+  src: [
+    {
+      path: "../../public/fonts/Geist/Geist-Regular.woff2",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/Geist/Geist-Bold.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-geist",
 });
 
-const geistMono = Geist_Mono({
+const geistMono = localFont({
+  src: "../../public/fonts/GeistMono/GeistMono-Regular.woff2",
   variable: "--font-geist-mono",
-  subsets: ["latin"],
 });
 
 export const metadata = {
@@ -18,12 +29,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="en" className={`${geist.variable} ${geistMono.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
+

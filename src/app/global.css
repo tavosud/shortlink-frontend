@@ -3,12 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-geist: 'Geist', sans-serif;
+  --font-geist-mono: 'Geist Mono', monospace;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-geist);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -52,4 +54,3 @@ body {
     @apply text-2xl text-left;
   }
 }
-
