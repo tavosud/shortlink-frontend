@@ -7,8 +7,14 @@ export default function Home() {
     <div className="h-screen flex flex-col items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-700 text-white p-4">
       <h1 className="text-6xl font-bold mb-4 text-center">ShortLink</h1>
       <h2 className="text-2xl font-semibold mb-2 text-center">Simplifica tus enlaces</h2>
-      <p className="text-xl mb-8 text-center max-w-2xl">
+      <p className="text-xl mb-4 text-center max-w-2xl">
         Transforma tus URLs largas en enlaces cortos y elegantes. Comparte fácilmente, gestiona todos tus enlaces en un solo lugar.
+      </p>
+      <p className="text-md mb-8 text-center text-indigo-200">
+        Proyecto de código abierto - Repositorios: {' '}
+        <a href="https://github.com/tavosud/shortlink-frontend" className="underline hover:text-white" target="_blank" rel="noopener noreferrer">Frontend</a> {' '}
+        y {' '}
+        <a href="https://github.com/tavosud/shortlink-api" className="underline hover:text-white" target="_blank" rel="noopener noreferrer">Backend</a>
       </p>
       <a
         href={loginUrl}
